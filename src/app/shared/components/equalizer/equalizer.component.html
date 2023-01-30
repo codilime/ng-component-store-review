@@ -1,0 +1,26 @@
+<div class="app-equalizer">
+  <div>
+    <span>Bass: </span>
+    <mat-slider min="0" max="100" step="1" [value]="bass" (valueChange)="setBass($event)">
+      <input matSliderThumb>
+    </mat-slider>
+    <span> {{ bass }} </span>
+  </div>
+  <div>
+    <span>Middle: </span>
+    <mat-slider min="0" max="100" step="1" [value]="middle" (valueChange)="setMiddle($event)">
+      <input matSliderThumb>
+    </mat-slider>
+    <span> {{ middle }} </span>
+  </div>
+  <div>
+    <span>Treble: </span>
+    <mat-slider min="0" max="100" step="1" [value]="treble" (valueChange)="setTreble($event)">
+      <input matSliderThumb>
+    </mat-slider>
+    <span> {{ treble }} </span>
+  </div>
+  <div>
+    <mat-slide-toggle [checked]="boost" (change)="setBoost($event)">Boost</mat-slide-toggle>
+  </div>
+</div>

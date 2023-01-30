@@ -1,0 +1,17 @@
+<app-equalizer
+  [bass]="bass$ | async"
+  [middle]="middle$ | async"
+  [treble]="treble$ | async"
+  [boost]="boost$ | async"
+  (bassChange)="onBassChange($event)"
+  (middleChange)="onMiddleChange($event)"
+  (trebleChange)="onTrebleChange($event)"
+  (boostChange)="onBoostChange($event)"
+></app-equalizer>
+
+<div>
+    <pre>
+    {{(state$ | async) | json }}
+  </pre>
+</div>
+
