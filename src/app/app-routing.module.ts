@@ -20,8 +20,8 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: RxAngularStorePageComponent,
-    loadChildren: () => import('../app/rx-angular-store/rx-angular-store.module').then(m => m.RxAngularStoreModule)
+    redirectTo: PATH.RX_ANGULAR_STORE,
+    pathMatch: 'full'
   }];
 
 @NgModule({
